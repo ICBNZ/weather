@@ -1,0 +1,16 @@
+video {
+  @include background;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-position: bottom;
+  z-index: 0;
+  animation: fadeIn 4s ease-in;
+  transition: all 4s ease-in;
+}
+#bg_img {
+  @include background;
+  position: fixed;
+  width: auto;
+  z-index: 0;
+}

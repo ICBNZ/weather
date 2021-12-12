@@ -1,0 +1,104 @@
+@import "mixins.scss";
+@import "components/Icon/icons.scss";
+@import "components/Video/video.scss";
+@import "components/Weather/weather.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  font-size: calc(10px + 1vmin);
+  color: black;
+  letter-spacing: $letter-spacing;
+  background-color: black;
+  background-image: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.1em;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  .fa {
+    margin-right: 0.5em;
+    font-weight: 400;
+    &:hover {
+      color: #116466;
+    }
+  }
+  &.submit {
+    min-width: 180px;
+    border: 0.4px solid #116466;
+    &:hover {
+      border: 0.8px solid white;
+    }
+  }
+}
+
+h2 {
+  font-size: 22px;
+}
+p {
+  font-size: 18px;
+}
+
+h1,
+p {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.title {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", "sans-serif";
+  h2 {
+    margin-right: 2em;
+  }
+}
+
+.nav {
+  @include main_cont;
+  background-color: black;
+  min-height: 80px;
+  justify-content: space-between;
+  color: #d1e8e2;
+  padding: $padding_main;
+  width: 100vw;
+  input {
+    width: 280px;
+    height: 35px;
+    padding: 0.5em;
+    font-size: 18px;
+    outline: none;
+  }
+  z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav {
+    padding-bottom: 4%;
+    justify-content: center;
+    input {
+      width: 220px;
+    }
+  }
+  .main {
+    background-size: cover;
+    background-repeat: none;
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Weather Icons";
+  src: url("../src/assets/icons/artill_clean_icons.otf");
+}
+
+$padding_main: 0 10vw;
+$letter-spacing: 0.05em;
+
+@mixin main_cont {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@mixin background {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+// Animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
